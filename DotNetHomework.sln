@@ -1,15 +1,13 @@
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32126.317
-MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{ACFCEFF7-8C3B-4D05-8080-DD19A6E07873}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hw1", "Homework1\Hw1\Hw1.csproj", "{4C0DB98A-6B41-4E8E-9558-1346F0CC64C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw1", "Homework1\Hw1\Hw1.csproj", "{4C0DB98A-6B41-4E8E-9558-1346F0CC64C7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hw1.Tests", "Homework1\Hw1.Tests\Hw1.Tests.csproj", "{2F7338C0-6535-4E98-894D-57AC5EF8E1C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw1Tests", "Homework1\Hw1.Tests\Hw1.Tests.csproj", "{2F7338C0-6535-4E98-894D-57AC5EF8E1C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homework 1", "Homework 1", "{489B9530-1E81-44F1-B026-B42879A56CF4}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,15 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Homework 1", "Homework 1", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "actions", "actions", "{82BA388F-4AE2-43A2-965A-AC2092BF26F3}"
 	ProjectSection(SolutionItems) = preProject
-		.github\coverlet.runsettings = .github\coverlet.runsettings
 		.github\workflows\dotnet.yml = .github\workflows\dotnet.yml
-		.github\workflows\Plagiarism_detector.yml = .github\workflows\Plagiarism_detector.yml
 		.github\workflows\test-reporter.yml = .github\workflows\test-reporter.yml
+		.github\workflows\Plagiarism_detector.yml = .github\workflows\Plagiarism_detector.yml
+		.github\coverlet.runsettings = .github\coverlet.runsettings
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw2Tests", "Homework2\Hw2.Tests\Hw2Tests.csproj", "{1702FD35-B10C-442E-A71C-0E234D804FDC}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hw2", "Homework2\Hw2\Hw2.ilproj", "{A81EAF1E-E70F-47BE-B80C-FE6FD51FB890}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,23 +36,9 @@ Global
 		{2F7338C0-6535-4E98-894D-57AC5EF8E1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F7338C0-6535-4E98-894D-57AC5EF8E1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F7338C0-6535-4E98-894D-57AC5EF8E1C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1702FD35-B10C-442E-A71C-0E234D804FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1702FD35-B10C-442E-A71C-0E234D804FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1702FD35-B10C-442E-A71C-0E234D804FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1702FD35-B10C-442E-A71C-0E234D804FDC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A81EAF1E-E70F-47BE-B80C-FE6FD51FB890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A81EAF1E-E70F-47BE-B80C-FE6FD51FB890}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A81EAF1E-E70F-47BE-B80C-FE6FD51FB890}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A81EAF1E-E70F-47BE-B80C-FE6FD51FB890}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4C0DB98A-6B41-4E8E-9558-1346F0CC64C7} = {489B9530-1E81-44F1-B026-B42879A56CF4}
 		{2F7338C0-6535-4E98-894D-57AC5EF8E1C4} = {489B9530-1E81-44F1-B026-B42879A56CF4}
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1C43A387-A4AB-4563-B963-FBA4702C6FB2}
 	EndGlobalSection
 EndGlobal
