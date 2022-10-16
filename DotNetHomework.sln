@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "actions", "actions", "{82BA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hw2", "Homework2\Hw2\Hw2.ilproj", "{17D05EBA-DD2C-4EC4-AE39-2B477EDEFBDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw2Tests", "Homework2\Hw2.Tests\Hw2Tests.csproj", "{33281000-4AA7-4268-9A40-025E9FFED58A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{17D05EBA-DD2C-4EC4-AE39-2B477EDEFBDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17D05EBA-DD2C-4EC4-AE39-2B477EDEFBDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17D05EBA-DD2C-4EC4-AE39-2B477EDEFBDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33281000-4AA7-4268-9A40-025E9FFED58A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33281000-4AA7-4268-9A40-025E9FFED58A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33281000-4AA7-4268-9A40-025E9FFED58A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33281000-4AA7-4268-9A40-025E9FFED58A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4C0DB98A-6B41-4E8E-9558-1346F0CC64C7} = {489B9530-1E81-44F1-B026-B42879A56CF4}
