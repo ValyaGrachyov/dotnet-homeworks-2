@@ -27,7 +27,6 @@ public static class Parser
                 break;
             default: operation = CalculatorOperation.Undefined;
                 throw new InvalidOperationException();
-                break;
         }
     }
 
