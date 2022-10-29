@@ -1,5 +1,5 @@
 using System;
-using Hw1;
+using Hw2;
 using Xunit;
 
 namespace Hw2Tests
