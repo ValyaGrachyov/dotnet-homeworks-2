@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <Compile Include="CalculatorOperationEnum.fs" />
         <Compile Include="Calculator.fs" />
         <Compile Include="Parser.fs" />
         <Compile Include="Program.fs" />
