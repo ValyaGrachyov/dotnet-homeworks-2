@@ -37,11 +37,11 @@ namespace Hw3.Tests
                 lock (Locker)
                 {
                     _instance = new Lazy<SingleInitializationSingleton>(() =>
-                              new SingleInitializationSingleton(delay));
-                    _isInitialized = true;  
+                        new SingleInitializationSingleton(delay));
+                    _isInitialized = true;
                 }
             }
-            else 
+            else
             {
                 throw new InvalidOperationException();
             }
