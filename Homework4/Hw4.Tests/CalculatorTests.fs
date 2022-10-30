@@ -2,6 +2,7 @@ module Hw4Tests.CalculatorTests
 
 open System
 open Hw4.Calculator
+open Hw4.CalculatorOperationEnum
 open Xunit
         
 [<Theory>]

@@ -3,6 +3,7 @@ module Hw4Tests.ParserTests
 open System
 open Hw4.Calculator
 open Hw4.Parser
+open Hw4.CalculatorOperationEnum
 open Xunit
         
 [<Theory>]

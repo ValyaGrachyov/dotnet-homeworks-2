@@ -3,6 +3,7 @@
 open System
 open System
 open Hw4.Calculator
+open Hw4.CalculatorOperationEnum
 
 
 type CalcOptions = {
