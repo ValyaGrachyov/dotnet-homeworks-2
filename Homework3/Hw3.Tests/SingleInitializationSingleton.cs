@@ -11,7 +11,7 @@ namespace Hw3.Tests
         private static volatile bool _isInitialized = false;
 
         public const int DefaultDelay = 3_000;
-
+        
         private static Lazy<SingleInitializationSingleton> _instance =
             new Lazy<SingleInitializationSingleton>(() => new SingleInitializationSingleton());
 
@@ -36,9 +36,7 @@ namespace Hw3.Tests
             {
                 lock (Locker)
                 {
-                    _instance = new Lazy<SingleInitializationSingleton>(() =>
-                              new SingleInitializationSingleton(delay));
-                    _isInitialized = true;
+                    
                 }
             }
             else
