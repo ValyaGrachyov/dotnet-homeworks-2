@@ -2,6 +2,7 @@ module Hw5Tests.CalculatorTests
 
 open Hw5
 open Hw5.Calculator
+open Hw5.Parser
 open Microsoft.FSharp.Core
 open Xunit
 
