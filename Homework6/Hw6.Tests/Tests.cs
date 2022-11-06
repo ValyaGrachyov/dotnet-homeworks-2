@@ -63,7 +63,7 @@ namespace Hw6Tests
         public async Task TestAllOperationsIncorrectValues(string value1, string value2, string operation,
             string expectedValue, HttpStatusCode statusCode) =>
             await RunTest(value1, value2, operation, expectedValue, statusCode);
-        
+
         [Theory]
         [InlineData("15.6", "5.6", "@", "Could not parse value '@'", HttpStatusCode.BadRequest)]
         [InlineData("15.6", "5.6", "$", "Could not parse value '$'", HttpStatusCode.BadRequest)]
@@ -81,7 +81,7 @@ namespace Hw6Tests
         {
             // arrange
             var url = $"/calculate?value1={value1}&operation={operation}&value2={value2}";
-            
+
             // act
             var client = _factory.CreateClient();
             var response = await client.GetAsync(url);

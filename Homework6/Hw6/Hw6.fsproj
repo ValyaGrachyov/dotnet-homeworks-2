@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
@@ -13,14 +13,21 @@
         <PackageReference Include="Ply" Version="0.3.*" />
     </ItemGroup>
 
-    <ItemGroup>
-        <Compile Include="Program.fs" />
-    </ItemGroup>
+	<ItemGroup>
+		<Compile Include="Calculator.fs" />
+		<Compile Include="MaybeBuilder.fs" />
+		<Compile Include="Parser.fs" />
+		<Compile Include="Program.fs" />
+	</ItemGroup>
 
-    <ItemGroup>
-        <None Include="web.config" CopyToOutputDirectory="PreserveNewest" />
-        <Content Include="WebRoot\**\*">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+	<ItemGroup>
+		<None Include="web.config" CopyToOutputDirectory="PreserveNewest" />
+		<Content Include="WebRoot\**\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Hw6Client\Hw6Client.fsproj" />
+	</ItemGroup>
 </Project>
