@@ -1,6 +1,6 @@
 v# Домашняя работа для третьего учебного семестра (2 год обучения)
 
-![.NET](https://github.com/ValyaGrachyov/dotnet-homeworks-2/actions/workflows/dotnet.yml/badge.svg)
+![.NET](https://github.com/ValyaGrachyv/dotnet-homeworks-2/actions/workflows/dotnet.yml/badge.svg)
 [![codecov](https://codecov.io/gh/ValyaGrachyov/dotnet-homeworks-2/branch/master/graph/badge.svg?token=GUQ1R3P3CH)](https://codecov.io/gh/ValyaGrachyov/dotnet-homeworks-2)
 
 ## Как устроены Actions
