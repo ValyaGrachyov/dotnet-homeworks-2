@@ -18,6 +18,14 @@ let (|Double|_|) (arg:string) =
     match Double.TryParse(arg, NumberStyles.AllowDecimalPoint, Globalization.CultureInfo.InvariantCulture) with
     | true, double -> Some double
     | _ -> None
+    
+let parseArgs (args: string[]): Result<('a * string * 'b), String> =
+    match args[0] with
+    | Double val1 ->
+        match args[2] with
+        | Double val2 -> Ok (val1, args[1], val2)
+        | _ -> Error $"Could not parse value '{args[2]}'"
+    | _ -> Error $"Could not parse value '{args[0]}'"
 
 let isArgLengthSupported (args:string[]): Result<'a,'b> =
     match args.Length with
@@ -29,14 +37,6 @@ let inline isOperationSupported (arg1, operation, arg2): Result<('a * Calculator
     match operation with
     | ParseOpr operation -> Ok (arg1, operation, arg2)
     | _ -> Error $"Could not parse value '{operation}'"
-
-let parseArgs (args: string[]): Result<('a * string * 'b), String> =
-    match args[0] with
-    | Double val1 ->
-        match args[2] with
-        | Double val2 -> Ok (val1, args[1], val2)
-        | _ -> Error $"Could not parse value '{args[2]}'"
-    | _ -> Error $"Could not parse value '{args[0]}'"
 
 [<System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage>]
 let inline isDividingByZero (arg1, operation, arg2): Result<('a * CalculatorOperation * 'b), String> =
