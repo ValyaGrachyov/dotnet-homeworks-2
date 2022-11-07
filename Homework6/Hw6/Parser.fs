@@ -6,7 +6,7 @@ open Hw6.MaybeBuilder
 open System.Globalization
 
 
-let (|CalculatorOperation|_|) arg =
+let (|ParseOpr|_|) arg =
     match arg with
     | Plus -> Some CalculatorOperation.Plus
     | Minus -> Some CalculatorOperation.Minus
@@ -27,7 +27,7 @@ let isArgLengthSupported (args:string[]): Result<'a,'b> =
 [<System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage>]
 let inline isOperationSupported (arg1, operation, arg2): Result<('a * CalculatorOperation * 'b), String> =
     match operation with
-    | CalculatorOperation operation -> Ok (arg1, operation, arg2)
+    | ParseOpr operation -> Ok (arg1, operation, arg2)
     | _ -> Error $"Could not parse value '{operation}'"
 
 let parseArgs (args: string[]): Result<('a * string * 'b), String> =
