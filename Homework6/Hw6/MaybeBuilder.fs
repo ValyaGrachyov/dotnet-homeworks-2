@@ -1,6 +1,5 @@
 ﻿module Hw6.MaybeBuilder
 
-open System
 
 type MaybeBuilder() =
     member builder.Bind(a, f): Result<'e,'d> =

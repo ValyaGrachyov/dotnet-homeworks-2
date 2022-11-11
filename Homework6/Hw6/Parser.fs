@@ -1,9 +1,12 @@
 ﻿module Hw6.Parser
 
 open System
-open Hw6.Calculator
 open Hw6.MaybeBuilder
+open CalculatorOperation
 open System.Globalization
+open Hw6.Calculator
+
+
 
 
 let (|ParseOpr|_|) arg =

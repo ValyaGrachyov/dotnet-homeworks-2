@@ -1,12 +1,7 @@
 ﻿module Hw6.Calculator
 
 open System
-
-type CalculatorOperation =
-     | Plus = 0
-     | Minus = 1
-     | Multiply = 2
-     | Divide = 3
+open CalculatorOperation
 
 [<Literal>] 
 let Plus = "+"

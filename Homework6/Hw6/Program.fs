@@ -4,6 +4,7 @@ open Microsoft.FSharp.Core
 open Parser
 open MaybeBuilder
 open Calculator
+open CalculatorOperation
 open Microsoft.AspNetCore.Hosting
 open Microsoft.AspNetCore.Builder
 open Microsoft.Extensions.Hosting
