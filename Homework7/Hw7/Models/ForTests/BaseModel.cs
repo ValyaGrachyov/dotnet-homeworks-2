@@ -1,5 +1,6 @@
-namespace Hw7.Models.ForTests;
+using Hw7.Enum;
 
+namespace Hw7.Models.ForTests;
 public class BaseModel
 {
     public virtual string FirstName { get; set; } = null!;

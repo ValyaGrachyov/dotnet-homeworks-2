@@ -1,6 +1,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Hw7;
+using Hw7.Enum;
 using Hw7.ErrorMessages;
 using Hw7.Models;
 using Hw7.Models.ForTests;
@@ -14,7 +15,7 @@ namespace Hw7Tests;
 public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
 {
     private readonly HttpClient _client;
-    private readonly string _url = "/Home/UserProfile";
+    private const string Url = "/Home/UserProfile";
 
     public UserFormTests(WebApplicationFactory<Program> fixture)
     {
@@ -29,7 +30,7 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
     public async Task EditorForModel_CheckInputTypes_CorrectTypes(string propertyName, string expectedType)
     {
         //arrange
-        var response = await TestHelper.GetFormHtml(_client, _url);
+        var response = await TestHelper.GetFormHtml(_client, Url);
 
         //act
         var actual = TestHelper.GetInputTypeForProperty(response, propertyName);
@@ -42,7 +43,7 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
     public async Task EditorForModel_CheckEnumTypeForSex_CorrectType()
     {
         //arrange
-        var response = await TestHelper.GetFormHtml(_client, _url);
+        var response = await TestHelper.GetFormHtml(_client, Url);
 
         //act
         var actual = TestHelper.TryGetSelect(response, "Sex");
@@ -50,7 +51,7 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
         //assert
         Assert.True(actual);
     }
-    
+
     [Theory]
     [InlineData("FirstName", "Имя")]
     [InlineData("LastName", "Фамилия")]
@@ -60,7 +61,7 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
     public async Task GetUserForm_ModelWithDisplayAttr_CorrectLabelsForProperties(string propertyName, string expected)
     {
         //arrange
-        var response = await TestHelper.GetFormHtml(_client, _url);
+        var response = await TestHelper.GetFormHtml(_client, Url);
 
         //act
         var actual = TestHelper.GetPropertyNameFromLabel(response, propertyName);
@@ -79,7 +80,7 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
     {
         //arrange
         var model = new BaseModel();
-        var response = await TestHelper.SendForm(_client, _url, model);
+        var response = await TestHelper.SendForm(_client, Url, model);
 
         //act
         var actual = TestHelper.GetValidationMessageFromSpan(response, propertyName);
@@ -87,7 +88,7 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
         //assert
         Assert.Equal(expected, actual);
     }
-    
+
     [Theory]
     [InlineData("FirstName", $"First Name {Messages.MaxLengthMessage}")]
     [InlineData("LastName", $"Last Name {Messages.MaxLengthMessage}")]
@@ -97,12 +98,19 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
         string expected)
     {
         //arrange
-        var model = new BaseModel{FirstName = TestHelper.LongString, LastName = TestHelper.LongString, MiddleName = TestHelper.LongString, Age = 15, Sex = Sex.Male};
-        var response = await TestHelper.SendForm(_client, _url, model);
-    
+        var model = new BaseModel
+        {
+            FirstName = TestHelper.LongString,
+            LastName = TestHelper.LongString,
+            MiddleName = TestHelper.LongString,
+            Age = 15,
+            Sex = Sex.Male
+        };
+        var response = await TestHelper.SendForm(_client, Url, model);
+
         //act
         var actual = TestHelper.GetValidationMessageFromSpan(response, propertyName);
-    
+
         //assert
         Assert.Equal(expected, actual);
     }

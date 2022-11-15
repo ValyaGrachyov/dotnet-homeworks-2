@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using Hw7.ErrorMessages;
+using Hw7.Enum;
 
 namespace Hw7.Models.ForTests;
 
