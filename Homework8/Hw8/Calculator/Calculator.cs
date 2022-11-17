@@ -1,6 +1,6 @@
 ﻿namespace Hw8.Calculator
 {
-    public class Calculate : ICalculator
+    public class Calculator : ICalculator
     {
         public double Divide(double val1, double val2)
         {
@@ -13,7 +13,7 @@
 
         public double Plus(double val1, double val2) => val1 + val2;
 
-        public double Calculator(double val1, Operation opr, double val2)
+        public double Calc(double val1, Operation opr, double val2)
         {
             switch (opr) 
                 {
