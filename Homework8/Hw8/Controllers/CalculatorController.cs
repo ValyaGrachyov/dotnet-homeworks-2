@@ -21,7 +21,7 @@ public class CalculatorController : Controller
         try
         {
             Parser.ParseCalcArguments(new string[] { val1, operation, val2 }, out x, out opr, out y);
-            result = new Calculator.Calculate().Calculator(x, opr, y);
+            result = new Calculator.Calculator().Calc(x, opr, y);
         }
         catch (Exception e)
         {

@@ -11,7 +11,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllersWithViews();
-        builder.Services.AddTransient<ICalculator, Calculate>();
+        builder.Services.AddTransient<ICalculator, Calculator.Calculator>();
 
         var app = builder.Build();
 
