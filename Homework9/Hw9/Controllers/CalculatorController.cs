@@ -1,5 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
-using Hw9.Dto;
+using Hw9.Infrastructure.Models;
 using Hw9.Services.MathCalculator;
 using Microsoft.AspNetCore.Mvc;
 

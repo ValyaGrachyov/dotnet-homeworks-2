@@ -1,6 +1,6 @@
 using System.Globalization;
 using System.Net.Http.Json;
-using Hw9.Dto;
+using Hw9.Infrastructure.Models;
 using Hw9.ErrorMessages;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;

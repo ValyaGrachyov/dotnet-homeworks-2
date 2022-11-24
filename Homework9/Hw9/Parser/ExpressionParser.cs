@@ -12,7 +12,7 @@ public class ExpressionParser
     private int Position;
 
     private static readonly Regex InputSplit = new("(?<=[−+*/\\(\\)])|(?=[−+*/\\(\\)])");
-    private static readonly Regex Numbers = new("[0-9]+");
+    private static readonly Regex Numbers = new("[0-9]");
 
     public ExpressionParser(string expression)
     {

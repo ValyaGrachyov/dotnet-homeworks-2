@@ -54,5 +54,6 @@ public class CalculatorVisitor
             ExpressionType.Divide => Divide(arg1, arg2),
             _ => throw new InvalidExpressionException()
         };
+
     }
 }

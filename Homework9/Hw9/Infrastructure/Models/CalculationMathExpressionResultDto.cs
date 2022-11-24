@@ -1,4 +1,4 @@
-namespace Hw9.Dto;
+namespace Hw9.Infrastructure.Models;
 
 public class CalculationMathExpressionResultDto
 {
