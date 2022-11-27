@@ -1,4 +1,5 @@
 using Hw10.Dto;
+using Hw10.Services.Parser;
 
 namespace Hw10.Services.MathCalculator;
 
@@ -8,11 +9,18 @@ public class MathCalculatorService : IMathCalculatorService
     {
         try
         {
-            //TODO
+            var parseExpression = new ExpressionParser(expression).Parse();
+            ;
+
+            var converteExpressionDictionary = new ExpressionConverter().ExpressionDictionary(parseExpression);
+
+            var result = await new CalculatorVisitor().VisitDictionary(converteExpressionDictionary);
+
+            return new CalculationMathExpressionResultDto(result);
         }
-        catch (Exception ex)
+        catch (Exception e)
         {
-            return new CalculationMathExpressionResultDto(expression);
+            return new CalculationMathExpressionResultDto(e.Message);
         }
     }
 }
