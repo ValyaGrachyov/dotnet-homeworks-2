@@ -24,5 +24,12 @@ public class MathCachedCalculatorService : IMathCalculatorService
 			await Task.Delay(1000);
 			return await Task.Run(() => new CalculationMathExpressionResultDto(solvingExpression.First().Result));
         }
+
+		var result = await _simpleCalculator.CalculateMathExpressionAsync(expression);
+		if (!result.IsSuccess) return result;
+		_dbContext.SolvingExpressions.Add(new SolvingExpression(expression!, result.Result));
+		await _dbContext.SaveChangesAsync();
+
+		return result;
 	}
 }
