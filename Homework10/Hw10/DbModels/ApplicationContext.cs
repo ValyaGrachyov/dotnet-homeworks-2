@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Hw10.DbModels;
 
-namespace Hw10;
+namespace Hw10.DbModels;
 
 public class ApplicationContext: DbContext	
 {
