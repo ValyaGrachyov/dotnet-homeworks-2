@@ -10,7 +10,7 @@ public class MathCalculatorService : IMathCalculatorService
         try
         {
             var parseExpression = new ExpressionParser(expression).Parse();
-            ;
+            
 
             var converteExpressionDictionary = new ExpressionConverter().ExpressionDictionary(parseExpression);
 
