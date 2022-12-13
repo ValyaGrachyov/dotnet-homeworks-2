@@ -1,4 +1,4 @@
-namespace Hw11.ErrorMessages;
+namespace Hw11.Infrastructure.ErrorMessages;
 
 public static class MathErrorMessager
 {

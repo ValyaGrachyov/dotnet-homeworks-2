@@ -1,4 +1,4 @@
-namespace Hw11.Services.MathCalculator;
+namespace Hw11.Infrastructure.Services.MathCalculator;
 
 public interface IMathCalculatorService
 { 

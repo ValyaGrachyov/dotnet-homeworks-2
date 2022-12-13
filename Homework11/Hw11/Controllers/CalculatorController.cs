@@ -1,7 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
-using Hw11.Dto;
-using Hw11.Exceptions;
-using Hw11.Services.MathCalculator;
+using Hw11.Infrastructure.Dto;
+using Hw11.Infrastructure.Exceptions;
+using Hw11.Infrastructure.Services.MathCalculator;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Hw11.Controllers;

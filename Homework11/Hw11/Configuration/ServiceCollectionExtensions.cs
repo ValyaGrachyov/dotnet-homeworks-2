@@ -1,4 +1,4 @@
-using Hw11.Services.MathCalculator;
+using Hw11.Infrastructure.Services.MathCalculator;
 
 namespace Hw11.Configuration;
 

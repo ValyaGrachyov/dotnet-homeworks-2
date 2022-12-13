@@ -1,8 +1,8 @@
 using System.Globalization;
 using System.Net.Http.Json;
 using Hw11;
-using Hw11.Dto;
-using Hw11.ErrorMessages;
+using Hw11.Infrastructure.Dto;
+using Hw11.Infrastructure.ErrorMessages;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 

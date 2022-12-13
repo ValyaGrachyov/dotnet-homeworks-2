@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace Hw11.Exceptions;
+namespace Hw11.Infrastructure.Exceptions;
 
 public class ExceptionHandler : IExceptionHandler
 {

@@ -1,4 +1,4 @@
-namespace Hw11.Dto;
+namespace Hw11.Infrastructure.Dto;
 
 public class CalculationMathExpressionResultDto
 {

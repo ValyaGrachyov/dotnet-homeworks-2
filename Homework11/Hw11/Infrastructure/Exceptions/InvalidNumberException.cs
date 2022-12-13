@@ -1,4 +1,4 @@
-﻿namespace Hw11.Exceptions;
+﻿namespace Hw11.Infrastructure.Exceptions;
 
 public class InvalidNumberException: Exception
 {

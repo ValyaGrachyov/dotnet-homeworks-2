@@ -1,6 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using Hw11.Configuration;
-using Hw11.Exceptions;
+using Hw11.Infrastructure.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
