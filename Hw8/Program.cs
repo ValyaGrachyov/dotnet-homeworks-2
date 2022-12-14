@@ -30,6 +30,7 @@ public class Program
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Calculator}/{action=Index}");
+        app.UseMiniProfiler();
 
         app.Run();
     }
